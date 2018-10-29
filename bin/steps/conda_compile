@@ -28,3 +28,9 @@ if [ -f requirements.txt ]; then
     puts-step "Installing dependencies using Pip"
     pip install -r requirements.txt  --exists-action=w | indent
 fi
+
+# Clean up the installation environment .
+conda clean -pt --yes > /dev/null
+rm -rf $HOME/.cache
+rm -rf $HOME/.heroku/miniconda/include
+rm -rf $HOME/.heroku/miniconda/pkgs
