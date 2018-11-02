@@ -23,7 +23,7 @@ if [ -f conda-requirements.txt ]; then
     conda install --file conda-requirements.txt --yes | indent
 fi
 
-conda install -c pythonocc -c oce pythonocc-core=0.17.3
+conda install -c oce -c pythonocc -c dlr-sc pythonocc-core=0.17.3
 
 if [ -f requirements.txt ]; then
     puts-step "Installing dependencies using Pip"
